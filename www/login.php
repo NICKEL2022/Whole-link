@@ -5,7 +5,7 @@ include_once 'inc/tool.inc.php';
 $link=connect();
 $member_id=is_login($link);
 if($member_id){
-	skip('index.php','error','你已经登录，请不要重复登录！');
+	skip('index.php','error','You are already logged in, please do not log in again!');
 }
 if(isset($_POST['submit'])){
 	include 'inc/check_login.inc.php';
@@ -15,13 +15,13 @@ if(isset($_POST['submit'])){
 	if(mysqli_num_rows($result)==1){
 		setcookie('sfk[name]',$_POST['name'],time()+$_POST['time']);
 		setcookie('sfk[pw]',sha1(md5($_POST['pw'])),time()+$_POST['time']);
-		/*设置这个登录的会员对于的last_time这个字段为now()*/
-		skip('index.php','ok','登录成功！');
+		/*Set the last_time field of this logged-in member to now()*/
+		skip('index.php','ok','login successful!');
 	}else{
-		skip('login.php', 'error', '用户名或密码填写错误！');
+		skip('login.php', 'error', 'Username or password is wrong!');
 	}
 }
-$template['title']='欢迎登录';
+$template['title']='Login please';
 $template['css']=array('style/public.css','style/register.css');
 ?>
 <?php
