@@ -8,7 +8,7 @@ if(version_compare(PHP_VERSION,'5.4.0')<0){
 define('DB_HOST','localhost');
 define('DB_USER','root');
 define('DB_PASSWORD','');
-define('DB_DATABASE','forum');
+define('DB_DATABASE','wholelink');
 define('DB_PORT',3306);
 //Our project (program), the absolute path on the server
 define('SA_PATH',dirname(dirname(__FILE__)));
