@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1:3306
--- 生成日期： 2022-12-08 14:19:27
+-- 生成日期： 2022-12-08 15:38:12
 -- 服务器版本： 5.7.36
 -- PHP 版本： 7.4.26
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- 数据库： `wholelink`
 --
+CREATE DATABASE IF NOT EXISTS `wholelink` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `wholelink`;
 
 -- --------------------------------------------------------
 
@@ -139,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `rooms` (
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `Username` varchar(20) DEFAULT NULL,
-  `User_id` int(11) NOT NULL,
+  `User_id` int(11) NOT NULL AUTO_INCREMENT,
   `Password` varchar(32) DEFAULT NULL,
   `E-mail_Address` varchar(32) DEFAULT NULL,
   `User_Agreement` tinyint(4) DEFAULT NULL,
@@ -147,14 +149,16 @@ CREATE TABLE IF NOT EXISTS `user` (
   `Data_Of_Birth` date DEFAULT NULL,
   `Register_Time` datetime DEFAULT NULL,
   PRIMARY KEY (`User_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `user`
 --
 
 INSERT INTO `user` (`Username`, `User_id`, `Password`, `E-mail_Address`, `User_Agreement`, `Phone_Number`, `Data_Of_Birth`, `Register_Time`) VALUES
-('123', 1, 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL, NULL, NULL, NULL);
+('123', 1, 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL, NULL, NULL, '2022-12-08 16:31:27'),
+('test', 2, 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL, NULL, NULL, '2022-12-08 16:31:27'),
+('test1', 3, 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL, NULL, NULL, '2022-12-08 16:31:46');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
