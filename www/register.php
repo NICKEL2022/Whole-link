@@ -6,36 +6,36 @@ include_once 'inc/tool.inc.php';
 $link=connect();
 $member_id=is_login($link);
 if($member_id){
-	skip('index.php','error','你已经登录，请不要重复注册！');
+	skip('index.php','error','You are already logged in, please do not register again!');
 }
 if(isset($_POST['submit'])){
 	include 'inc/check_register.inc.php';
-	$query="insert into sfk_member(name,pw,register_time,photo,last_time) values('{$_POST['name']}',md5('{$_POST['pw']}'),now(),'',now())";
+	$query="insert into user(Username,Password,Register_Time) values('{$_POST['name']}',md5('{$_POST['pw']}'),now());";
 	execute($link,$query);
 	if(mysqli_affected_rows($link)==1){
 		setcookie('sfk[name]',$_POST['name']);
 		setcookie('sfk[pw]',sha1(md5($_POST['pw'])));
-		skip('index.php','ok','注册成功！');
+		skip('index.php','ok','registration success!');
 	}else{
-		skip('register.php','eror','注册失败,请重试！');
+		skip('register.php','eror','Registration failed, please try again!');
 	}
 }
-$template['title']='会员注册页';
+$template['title']='registration page';
 $template['css']=array('style/public.css','style/register.css');
 ?>
 <?php include 'inc/header.inc.php'?>
 	<div id="register" class="auto">
-		<h2>欢迎注册成为 会员</h2>
+		<h2>Welcome to register as a member</h2>
 		<form method="post">
-			<label>用户名：<input type="text" name="name"  /><span>*用户名不得为空，并且长度不得超过32个字符</span></label>
-			<label>密码：<input type="password" name="pw"  /><span>*密码不得少于6位</span></label>
-			<label>确认密码：<input type="password" name="confirm_pw"  /><span>*请输入与上面一致</span></label>
+			<label>Username：<input type="text" name="name"  /><span>*Username cannot be empty and not exceed 32 </span></label>
+			<label>Password：<input type="password" name="pw"  /><span>*The password must not be less than 6 characters</span></label>
+			<label>Comfirm PW：<input type="password" name="confirm_pw"  /><span>*Please enter the same as above</span></label>
 			<div style="clear:both;"></div>
-			<input class="btn" name="submit" type="submit" value="确定注册" />
+			<input class="btn" name="submit" type="submit" value="confirm registration" />
 		</form>
 	</div>
 	<div id="footer" class="auto">
-		<div class="copyright">Powered by 小声哔哔的弱鸡 ©2020</div>
+		<div class="copyright">Powered by NICKLE ©2022</div>
 	</div>
 </body>
 </html>
