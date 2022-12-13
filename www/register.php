@@ -10,7 +10,7 @@ if($member_id){
 }
 if(isset($_POST['submit'])){
 	include 'inc/check_register.inc.php';
-	$query="insert into user(Username,Password,Register_Time) values('{$_POST['name']}',md5('{$_POST['pw']}'),now());";
+	$query="insert into user(Username,Password,email,Register_Time,Data_Of_Birth,User_Agreement) values('{$_POST['name']}',md5('{$_POST['pw']}'),'{$_POST['email']}',now(),'{$_POST['Date_Of_Birth']}','{$_POST['User_Agreement']}')";
 	execute($link,$query);
 	if(mysqli_affected_rows($link)==1){
 		setcookie('sfk[name]',$_POST['name']);
@@ -24,18 +24,6 @@ $template['title']='registration page';
 $template['css']=array('style/public.css','style/register.css');
 ?>
 <?php include 'inc/header.inc.php'?>
-	<div id="register" class="auto">
-		<h2>Welcome to register as a member</h2>
-		<form method="post">
-			<label>Username：<input type="text" name="name"  /><span>*Username cannot be empty and not exceed 32 </span></label>
-			<label>Password：<input type="password" name="pw"  /><span>*The password must not be less than 6 characters</span></label>
-			<label>Comfirm PW：<input type="password" name="confirm_pw"  /><span>*Please enter the same as above</span></label>
-			<div style="clear:both;"></div>
-			<input class="btn" name="submit" type="submit" value="confirm registration" />
-		</form>
-	</div>
-	<div id="footer" class="auto">
-		<div class="copyright">Powered by NICKLE ©2022</div>
-	</div>
-</body>
-</html>
+<?php
+    include ("Registation.html");
+?>
