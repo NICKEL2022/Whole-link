@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
         <link rel="stylesheet" type="text/css" href="./style/loginPage.css" />
         <title>log in or register</title>
     </head>
 
     <body>
+        <!--左边背景div-->
         <div class="left">
             <div class="title">
                 <img src="./image/loginPage_back.png" alt="backgrand" id="backgrand" /><br/>
@@ -14,35 +16,45 @@
                 <p class="title3">www.whole-link.fr</p >
             </div>
         </div>
+        <!--登录form-->
         <div class="right">
             <div class="login_table">
+                <!--logo-->
                 <div style="text-align: center">
                     <img src="./image/logo whole-link.png" alt="Logo of whole-link" id="wholelink" /><br/>
                 </div>
+                <!--链接到google登录-->
                 <!--button id="google"><a href="https://www.google.com">Log in with Google</a></button><br/-->
                 <div class="google_login">
-                    <a href="/users/google-oauth/" style="text-transform:none">
+                    <a href="https://www.google.com" id="google_href"><!--/users/google-oauth/-->
+                        <span class="google_title">
                         <img width="20px" alt="Google sign-in" class="google_img"
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                        <p class="google_title">Login with Google</p>
+                        Login with Google
+                        </span>
                     </a>
                 </div>
                 
                 <!-- Compiled and minified CSS -->
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+                <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
 
                 <!-- Compiled and minified JavaScript -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+                <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>-->
                 
+                <br>
                 <div class="line">
                     <span class="text">or</span>
                 </div>
                 <form action="#.php" method="post" >
-                    <input type="text" name="username" placeholder="Phone number, username, or email" /><br/>
-                    <input type="password" name="password" placeholder="password" /><br/>
-                    <input type="submit" name="login" value="Log in" /><br/>
+                    <input type="text" name="username" placeholder="Phone number, username, or email" class="username" /><br/>
+                    </br>
+                    <input type="password" name="password" placeholder="password" class="password" /><br/>
+                    </br>
+                    <input type="submit" name="login" value="Log in" class="submit_button" /><br/>
                 </form>
+                <!--忘记密码-->
                 <a href="#forgot password" id="forgot">Forgot password?</a><br>
+                <!--转到register界面-->
                 <a href="#Registration Page" id="register">Don't have an account? Sign in</a>
             </div>
         </div>
