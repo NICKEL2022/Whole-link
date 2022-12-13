@@ -20,7 +20,7 @@
         <div class="right">
             <div class="login_table">
                 <!--logo-->
-                <div style="text-align: center">
+                <div class="logo_whole">
                     <img src="./image/logo whole-link.png" alt="Logo of whole-link" id="wholelink" /><br/>
                 </div>
                 <!--链接到google登录-->
@@ -45,17 +45,19 @@
                 <div class="line">
                     <span class="text">or</span>
                 </div>
-                <form action="#.php" method="post" >
-                    <input type="text" name="username" placeholder="Phone number, username, or email" class="username" /><br/>
+                <br>
+                <!--登录框-->
+                <form method="post" >
+                    <input type="text" name="name" placeholder="Phone number, username, or email" class="username" /><br/>
                     </br>
-                    <input type="password" name="password" placeholder="password" class="password" /><br/>
+                    <input type="password" name="pw" placeholder="password" class="password" /><br/>
                     </br>
-                    <input type="submit" name="login" value="Log in" class="submit_button" /><br/>
+                    <input type="submit" name="submit" value="Log in" class="submit_button" /><br/>
                 </form>
                 <!--忘记密码-->
-                <a href="#forgot password" id="forgot">Forgot password?</a><br>
+                <a href="#forgot password" id="forgot" target="_blank">Forgot password?</a><br>
                 <!--转到register界面-->
-                <a href="#Registration Page" id="register">Don't have an account? Sign in</a>
+                <a href="#Registration Page" id="register" target="_blank">Don't have an account? Sign in</a>
             </div>
         </div>
     </body>
