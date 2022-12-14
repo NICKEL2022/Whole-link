@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registation Page</title>
+        <link rel="stylesheet" type="text/css" href="Style.css">
+    </head>
+    <body>
+      <div class="form_wrapper">
+        <div class="form_container">
+          <div class="title_container">
+            <h2>Sign up on Whole-Link</h2>
+          </div>
+          
+          <div class="google_login">
+            <a href="https://www.google.com" id="google_href"><!--/users/google-oauth/-->
+                <span class="google_title">
+                <img width="20px" alt="Google sign-in" class="google_img"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                Login with Google
+                </span>
+            </a>
+        </div>
+        <br>
+        <div class="line">
+            <span class="text">or</span>
+        </div>
+        <br>
+
+          <div class="row clearfix">
+            <div class="">
+              <form>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                  <input type="email" name="E-mail_Address" placeholder="Email" required />
+                </div>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                  <input type="password" name="Password" placeholder="Password" required />
+                </div>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                  <input type="text" name="Phone_Number" placeholder="Phone Number" required />
+                </div>
+                <div class="row clearfix">
+                  <div class="col_half">
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                      <input type="text" name="Username" placeholder="Username" />
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <label class="head123">Date of Birth</label>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                      <input type="date" name="Date_Of_Birth" placeholder="Last Name" required />
+                    </div>
+                  </div>
+                </div>
+                <label class="head123">Gender</label>
+                    <div class="input_field radio_option">
+                    <input type="radio" name="radiogroup1" id="rd1">
+                    <label for="rd1">Male</label>
+                    <input type="radio" name="radiogroup1" id="rd2">
+                    <label for="rd2">Female</label>
+                    <input type="radio" name="radiogroup1" id="rd3">
+                    <label for="rd3">Non-Binary</label>
+                    </div>
+                    <div class="input_field select_option">
+                      <select>
+                        <option>Select a country</option>
+                        <option>France</option>
+                        <option>China</option>
+                      </select>
+                      <div class="select_arrow"></div>
+                    </div>
+                  <div class="input_field checkbox_option">
+                    <input type="checkbox" id="User_Agreement" required>
+                <label for="cb1">I agree with terms and conditions</label>
+                  </div>
+                  <div class="input_field checkbox_option">
+                    <input type="checkbox" id="cb2">
+                <label for="cb2">I want to receive the newsletter (Optional)</label>
+                  </div>
+                <input class="button" type="submit" value="Register" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="credit">Already have a account? <a href="" target="_blank">Click Here</a></p>
+        
+    </body>
+</html>
