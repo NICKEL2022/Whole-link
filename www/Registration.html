@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registation Page</title>
-        <link rel="stylesheet" type="text/css" href="./style/Registration.css">
+        <link rel="stylesheet" type="text/css" href="style/RegistationStyle.css">
     </head>
     <body>
       <div class="form_wrapper">
@@ -16,26 +16,29 @@
           </div>
           <div class="row clearfix">
             <div class="">
-              <form>
+              <form method="post">
                 <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                  <input type="email" name="E-mail_Address" placeholder="Email" required />
+                  <input type="email" name="email" placeholder="Email" required />
                 </div>
                 <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                  <input type="password" name="Password" placeholder="Password" required />
+                  <input type="password" name="pw" placeholder="Password" required />
                 </div>
                 <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                  <input type="text" name="Phone_Number" placeholder="Phone Number" required />
+                  <input type="password" name="confirm_pw" placeholder="Re-type Password" required />
+                </div>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                  <input type="text" name="Phone_number" placeholder="Phone_number" required />
                 </div>
                 <div class="row clearfix">
                   <div class="col_half">
                     <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                      <input type="text" name="Username" placeholder="Username" />
+                      <input type="text" name="name" placeholder="Username" />
                     </div>
                   </div>
                   <div class="col_half">
                     <label class="head123">Date of Birth</label>
                     <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                      <input type="date" name="Date_Of_Birth" placeholder="Last Name" required />
+                      <input type="date" name="Date_Of_Birth" placeholder="Last Name"  />
                     </div>
                   </div>
                 </div>
@@ -55,22 +58,21 @@
                         <option>China</option>
                       </select>
                       <div class="select_arrow"></div>
-                    </div>
-                  <div class="input_field checkbox_option">
-                    <input type="checkbox" id="User_Agreement" required>
-                <label for="cb1" >I agree with terms and conditions</label>
-                  </div>
-                  <div class="input_field checkbox_option">
-                    <input type="checkbox" id="cb2">
-                <label for="cb2" name="User_Agreement">I want to receive the newsletter (Optional)</label>
-                  </div>
-                <input class="button" type="submit" value="Register" />
+                      <div class="input_field checkbox_option">
+                        <input type="checkbox" id="cb1" name="User_Agreement" value="1" required>
+                    <label for="cb1">I agree with terms and conditions</label>
+                      </div>
+                      <div class="input_field checkbox_option">
+                        <input type="checkbox" id="cb2">
+                    <label for="cb2">I want to receive the newsletter (Optional)</label>
+                      </div>
+                <input class="btn" name="submit" type="submit" value="Register" />
               </form>
             </div>
           </div>
         </div>
       </div>
-      <p class="credit">Already have a account? <a href="" target="_blank">Click Here</a></p>
+      <p class="credit">Already have a account? <a href="login.php" target="_blank">Click Here</a></p>
         
     </body>
 </html>

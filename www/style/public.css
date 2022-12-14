@@ -34,7 +34,7 @@ body {
 }
 /**基本格式结束***************/
 .header_wrap {
-	background:#488fce;
+	background:#1E5CC4;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     display: block;
     left: 0;
@@ -50,7 +50,7 @@ body {
 #header .logo {
 	width:100px;
 	font-size:20px;
-	font-family:微软雅黑;
+	font-family:Noto Sans SC;
 	font-weight:bold;
 	color:#fff;
 	float:left;
@@ -66,30 +66,9 @@ body {
 	cursor:pointer;
 }
 #header .nav a.hover {
-	background:#3b7fc4;
+	background:#1E5CC4;
 }
-#header .serarch {
-	background: none repeat scroll 0 0 #f2f2f2;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-    display: inline;
-    float: left;
-    height: 28px;
-    margin: 8px 0 0 10px;
-    padding:0;
-    width: 160px;
-}
-#header .serarch:hover {
-	background:#fff;
-}
-#header .serarch input.keyword {
-	width:130px;
-	height:20px;
-	margin:3px 0 0 5px;
-	display:block;
-	float:left;
-	border:0px;
-}
+
 #header .serarch input.submit {
 	background:url(style_icon.png) 0px -593px;
     border: 0 none;
