@@ -13,8 +13,8 @@ if(isset($_POST['submit'])){
 	$query="insert into user(Username,Password,email,Register_Time,Data_Of_Birth,User_Agreement,Phone_Number,last_time) values('{$_POST['name']}',md5('{$_POST['pw']}'),'{$_POST['email']}',now(),'{$_POST['Date_Of_Birth']}','{$_POST['User_Agreement']}','{$_POST['Phone_number']}',now())";
 	execute($link,$query);
 	if(mysqli_affected_rows($link)==1){
-		setcookie('sfk[name]',$_POST['name']);
-		setcookie('sfk[pw]',sha1(md5($_POST['pw'])));
+		setcookie('name',$_POST['name']);
+		setcookie('pw',sha1(md5($_POST['pw'])));
 		skip('index.php','ok','registration success!');
 	}else{
 		skip('register.php','eror','Registration failed, please try again!');
