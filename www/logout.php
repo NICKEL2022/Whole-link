@@ -7,7 +7,7 @@ $member_id=is_login($link);
 if(!$member_id){
 	skip('index.php','error','You are not logged in, no need to log out!');
 }
-setcookie('sfk[name]','',time()-3600);
-setcookie('sfk[pw]','',time()-3600);
+setcookie('name','',time()-3600);
+setcookie('pw','',time()-3600);
 skip('index.php','ok','logout successfully！');
 ?>

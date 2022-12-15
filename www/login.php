@@ -10,12 +10,16 @@ if($member_id){
 if(isset($_POST['submit'])){
 	include 'inc/check_login.inc.php';
 	escape($link,$_POST);
+	$expires=time()+$_POST['times'];
+	$date = date('Y-m-d H:i:s',$expires);
 	$query="select * from user where Username='{$_POST['name']}' and Password=md5('{$_POST['pw']}')";
+	$query1="update user set last_time ='$date' where Username='{$_POST['name']}'";
 	$result=execute($link, $query);
 	if(mysqli_num_rows($result)==1){
-		setcookie('sfk[name]',$_POST['name'],time()+$_POST['time']);
-		setcookie('sfk[pw]',sha1(md5($_POST['pw'])),time()+$_POST['time']);
-		/*设置这个登录的会员对于的last_time这个字段为now()*/
+		setcookie('name',$_POST['name'],time()+$_POST['times']);
+		setcookie('pw',sha1(md5($_POST['pw'])),time()+$_POST['times']);
+		/*Set the last_time field of this logged-in member to now()+posted time*/
+		execute($link,$query1);
 		skip('index.php','ok','login secess！');
 	}else{
 		skip('login.php', 'error', 'Username or password is wrong!');

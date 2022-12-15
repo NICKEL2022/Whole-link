@@ -1,102 +1,505 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Darshboard</title>
-        <!-- 导入阿里的图标样式文件 -->
-        <link rel="stylesheet" href="style/iconfont.css">
-        <link rel="stylesheet" href="style/dashboard.css">
-    </head>
-    <body>
-        <div class="content">
-            <div class="menu-box">
-                <!-- 展示与隐藏侧边栏 开始-->
-                <input type="checkbox" id="menu-btn">
-                <label for="menu-btn"><i class="iconfont icon-yemianfanhui"></i></label>
-                <!-- 展示与隐藏侧边栏 结束-->
-                <div class="menu">
-                    <!-- 侧边栏的标题 开始-->
-                    <div class="menu-title">
-                        <h1>Whole link</h1>
-                    </div>
-                    <!-- 侧边栏的标题 结束-->
-    
-                    <!-- 每一项导航 -->
-                    <div class="menu-item">
-                        <input type="checkbox" id="menu-item1">
-                        <label for="menu-item1">
-                            <i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
-                            <span>dashboard</span>
-                            <i class="menu-item-last iconfont icon-down"></i>
-                        </label>
-                        <!-- <div class="menu-content">
-                            <span>option1</span>
-                            <span>option2</span>
-                            <span>option3</span>
-                        </div> -->
-                    </div>
-    
-                    <div class="menu-item">
-                        <input type="checkbox" id="menu-item2">
-                        <label for="menu-item2">
-                            <i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
-                            <span>Devices</span>
-                            <i class="menu-item-last iconfont icon-down"></i>
-                        </label>
-                        <div class="menu-content">
-                            <span>List</span>
-                            <span>available</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="./style/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="./style/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="./style/demo.css" />
+    <link rel="stylesheet" href="./style/button.css" />
+  
+
+</head>
+
+<body>
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+      <!-- Menu -->
+
+  <aside id="layout-menu" class="menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+      <a href="index.php" class="app-brand-link">
+        <span class="app-brand-text demo menu-text fw-bolder ms-2">Whole-Link</span>
+      </a> 
+    </div>
+    <div class="menu-inner-shadow"></div>
+    <!-- menu -->
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item active">
+              <a href="index.php" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Dashboard</div>
+              </a>
+            </li>
+
+            <!-- Devices -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="Devices">Devices</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="layouts-without-menu.html" class="menu-link">
+                    <div data-i18n="List">List</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="available">available</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Stuation = cards -->
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">situation</div>
+              </a>
+            </li>
+
+
+            <!-- Shopping mall = cards -->
+            <li class="menu-item">
+                <a href="cards-basic.html" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-collection"></i>
+                  <div data-i18n="Basic">Shopping mall</div>
+                </a>
+            </li>
+             <!--Historical Record = cards -->
+             <li class="menu-item">
+                <a href="history.php" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-collection"></i>
+                  <div data-i18n="Basic">Historical Record</div>
+                </a>
+              </li>
+          </ul>
+        </aside>
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-lg-8 mb-4 order-0">
+                  <div class="card">
+                    <div class="d-flex align-items-end row">
+                      <div class="col-sm-7">
+                        <div class="card-body">
+                          <h3 class="card-title text-primary"> John! </h3>
+                          <p class="mb-4">
+                            Wednesday, March 16, 2022  |  5.10 AM  
+                          </p>
+
+                         
                         </div>
+                      </div>
                     </div>
-    
-                    <div class="menu-item">
-                        <input type="checkbox" id="menu-item3">
-                        <label for="menu-item3">
-                            <i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
-                            <span>Situation</span>
-                            <i class="menu-item-last iconfont icon-down"></i>
-                        </label>
-                        <!-- <div class="menu-content">
-                            <span>option1</span>
-                            <span>option2</span>
-                            <span>option3</span>
-                        </div> -->
+                  </div>
+                </div>
+        <div class="contextt"> 
+             <!--4small devices  -->
+             <div class="col-lg-4 col-md-4 order-1">
+              <div class="row">
+                <!-- sound -->
+                <div class="col-lg-6 col-md-12 col-6 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="avatar flex-shrink-0">
+                          <img 
+                            src="./image/sound.png"
+                            alt="icon"
+                            class="rounded"
+                          />
+                        </div>
+                      </div>
+                      <span class="fw-semibold d-block mb-1">Sound</span>
+          
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Android TV -->
+                <div class="col-lg-6 col-md-12 col-6 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="avatar flex-shrink-0">
+                          <img
+                            src="./image/TV1.png"
+                            alt="TV"
+                            class="rounded"
+                          />
+                        </div>
+                        
+                      </div>
+                      <span class="fw-semibold d-block mb-1">Android TV</span>
+
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- Curtin -->
+                 <div class="col-lg-6 col-md-12 col-6 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="avatar flex-shrink-0">
+                          <img
+                            src="./image/curtain.png"
+                            alt="slepping"
+                            class="rounded"
+                          />
+                        </div>
+                        
+                      </div>
+                      <span class="fw-semibold d-block mb-1">Curtin</span>
+
+                    </div>
+                  </div>
+                </div>
+                
+                 <!-- Smart cleaner -->
+                 <div class="col-lg-6 col-md-12 col-6 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="avatar flex-shrink-0">
+                          <img
+                            src="./image/Smart.png"
+                            alt="backhome"
+                            class="rounded"
+                          />
+                        </div>
+                      </div>
+                      <span class="fw-semibold d-block mb-1">Smart Cleaner</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          <div clasa="left"> 
+                <!-- Tow big device  -->
+              <div  class="bigdevice">
+               <!-- air conditioner -->
+               <div class="col-12 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
+                      <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
+                        <div class="card-title">
+                          <h5 class="text-nowrap mb-2">Air conditioner</h5>
+                          <form action=".php">
+                            <label><input class="switch" type="checkbox">ON/OFF</label><br>
+                            <img src="./image/airConditioning.png" alt="air conditioner" class="rounded"/><br/>
+                            <p>Modes</p>
+                            <div>
+                              <label><input class="switch" name="airMode" type="radio" value="snow">Snow</label>
+                              <label><input class="switch" name="airMode" type="radio" value="sunny">Sunny</label>
+                              <label><input class="switch" name="airMode" type="radio" value="rain">Rain</label>
+                            </div>
+                          </form>
+                        </div>
+                      
+                      </div>
+                      <div id="profileReportChart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!-- litght contral -->
+                <div class="col-12 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                     <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
+                        <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
+                          <div class="card-title"> 
+                            <h5 class="text-nowrap mb-2">Light contral</h5>
+                            <form action=".php">
+                              <label><input class="switch" type="checkbox">ON/OFF</label><br>
+                              <img src="./image/light.png" alt="light" class="rounded"/><br/>
+                              <h5 class="text-nowrap mb-2">Brightness</h5>
+                              <label><input class="switch" name="airMode" type="radio" value="snow">cool</label>
+                              <label><input class="switch" name="airMode" type="radio" value="snow">warm</label>
+                              <label><input class="switch" name="airMode" type="radio" value="snow">color</label>
+                              
+                            </form>
+                          </div>
+                        
+                        </div>
+                        <div id="profileReportChart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+
+                <!-- Total Revenue -->
+                <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
+                  <div class="card">
+                    <div class="row row-bordered g-0">
+                      <div class="col-md-8">
+                        <h5 class="card-header m-0 me-2 pb-3">Power Statistics</h5>
+                        <img
+                                src="./image/statistic.png"
+                                alt="slepping"
+                                class="rounded"
+                                style="height: 400px; width: 800px;"
+                             
+                              />
+                        <div id="totalRevenueChart" class="px-2"></div>
+                      </div>
+                      <div class="col-md-4">
+                        
+                        
+                        <div class="text-center fw-semibold pt-3 mb-2">62% Company Growth</div>
+
+                        <div class="d-flex px-xxl-4 px-lg-2 p-4 gap-xxl-3 gap-lg-1 gap-3 justify-content-between">
+                          <div class="d-flex">
+                            <div class="me-2">
+                              <span class="badge bg-label-primary p-2"><i class="bx bx-dollar text-primary"></i></span>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <small>2022</small>
+                              <h6 class="mb-0">$32.5k</h6>
+                            </div>
+                          </div>
+                          <div class="d-flex">
+                            <div class="me-2">
+                              <span class="badge bg-label-info p-2"><i class="bx bx-wallet text-info"></i></span>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <small>2021</small>
+                              <h6 class="mb-0">$41.2k</h6>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                
+            
+            </div>
+
+            <div class="right">
+                <div class="col-lg-4 col-md-4 order-1">
+                  <div class="row">
+                    <!-- game -->
+                    <div class="col-lg-6 col-md-12 col-6 mb-4">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-start justify-content-between">
+                            <div class="avatar flex-shrink-0">
+                              <img 
+                                src="./image/game.png"
+                                alt="icon"
+                                class="rounded"
+                              />
+                            </div>
+                          </div>
+                          <span class="fw-semibold d-block mb-1">Game time</span>
+              
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="menu-item">
-                        <input type="checkbox" id="menu-item3">
-                        <label for="menu-item4">
-                            <i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
-                            <span>Shopping mall</span>
-                            <i class="menu-item-last iconfont icon-down"></i>
-                        </label>
+                    <!-- TV -->
+                    <div class="col-lg-6 col-md-12 col-6 mb-4">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-start justify-content-between">
+                            <div class="avatar flex-shrink-0">
+                              <img
+                                src="./image/TV.png"
+                                alt="TV"
+                                class="rounded"
+                              />
+                            </div>
+                            
+                          </div>
+                          <span class="fw-semibold d-block mb-1">Watch TV</span>
+    
+                        </div>
+                      </div>
+                    </div>
+
+                     <!-- Slepping -->
+                     <div class="col-lg-6 col-md-12 col-6 mb-4">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-start justify-content-between">
+                            <div class="avatar flex-shrink-0">
+                              <img
+                                src="./image/slepping.png"
+                                alt="slepping"
+                                class="rounded"
+                              />
+                            </div>
+                            
+                          </div>
+                          <span class="fw-semibold d-block mb-1">slepping</span>
+    
+                        </div>
+                      </div>
                     </div>
                     
-                    <div class="menu-item">
-                        <input type="checkbox" id="menu-item3">
-                        <label for="menu-item5">
-                            <i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
-                            <span>Historical Record</span>
-                            <i class="menu-item-last iconfont icon-down"></i>
-                        </label>
+                     <!-- Back home -->
+                     <div class="col-lg-6 col-md-12 col-6 mb-4">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-start justify-content-between">
+                            <div class="avatar flex-shrink-0">
+                              <img
+                                src="./image/backhome.png"
+                                alt="backhome"
+                                class="rounded"
+                              />
+                            </div>
+                          </div>
+                          <span class="fw-semibold d-block mb-1">Back home</span>
+    
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="set-line"></div>
-
-                    <div class="menu-item">
-                        <label>
-                            <i class="menu-item-icon iconfont icon-a-08-shezhi"></i>
-                            <span>setting</span>
-                        </label>
-                        <label>
-                            <i class="menu-item-icon iconfont icon-a-08-shezhi"></i>
-                            <span>Log out</span>
-                        </label>
-                    </div>
+                  </div>
                 </div>
+              
+              <!-- Transactions -->
+              <div class="col-md-6 col-lg-4 order-2 mb-4">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <h4 class="card-title m-0 me-2">Recent Activites</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="p-0 m-0">
+                      <li class="d-flex mb-4 pb-1">
+                        
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Air Conditioner ON</h6>
+                            <small class="text-muted d-block mb-1">10 Minutes ago</small>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-1">
+                            <span class="text-muted">by</span>
+                            <h6 class="mb-0">John</h6>
+                            
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex mb-4 pb-1">
+        
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Android TV ON</h6>
+                            <small class="text-muted d-block mb-1">13 Minutes ago</small>
+      
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-1">
+                            <span class="text-muted">by</span>
+                            <h6 class="mb-0">John</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex mb-4 pb-1">
+                        
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Light ON</h6>
+                            <small class="text-muted d-block mb-1">15 Minutes ago</small>
+      
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-1">
+                            <span class="text-muted">by</span>
+                            <h6 class="mb-0">John</h6>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Curtain OFF</h6>
+                            <small class="text-muted d-block mb-1">15 Minutes ago</small>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-1">
+                            <span class="text-muted">by</span>
+                            <h6 class="mb-0">John</h6>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="d-flex mb-4 pb-1">   
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Smart Cleaner OFF</h6>
+                            <small class="text-muted d-block mb-1">1 hour ago</small>
+                           
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-1">
+                            <span class="text-muted">by</span>
+                            <h6 class="mb-0">John</h6>
+                          </div>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--/ Transactions -->
             </div>
+            
+          </div>
+        </div> 
         </div>
-    </body>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+ 
+<!-- 
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../assets/vendor/js/bootstrap.js"></script>
+  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+  <script src="../assets/vendor/js/menu.js"></script>
+  <-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+  <!-- Main JS -->
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Page JS -->
+  <script src="../assets/js/dashboards-analytics.js"></script>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+</body>
 </html>

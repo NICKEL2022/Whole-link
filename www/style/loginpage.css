@@ -10,7 +10,7 @@
         position:static;
     }
     .login_table{ 
-        transform:translate(-50%,-65%);
+        transform:translate(-50%,-80%);
     }
 }
 
@@ -27,7 +27,7 @@
         position:relative;
     }
     .login_table{ 
-    transform:translate(-50%,-70%);
+    transform:translate(-50%,-80%);
     }
 }
 
@@ -193,6 +193,25 @@ form[type=text]{
     height: 50px;
     border: 2px solid #1E5CC4;
     border-radius: 8px;
+}
+
+.autoTitle{
+    color: rgb(113, 113, 113);
+    font-family: Roboto;
+    text-align: right;
+}
+
+.autotime{
+    width:236px;
+    height:25px;
+    border: 1px solid rgb(168, 168, 179);
+}
+
+.autoPro{
+    color: rgb(168, 168, 179);
+    font-size: 12px;
+    font-family: Noto Sans SC;
+    text-align: right;
 }
 
 #forgot{

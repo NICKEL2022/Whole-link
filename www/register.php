@@ -10,7 +10,7 @@ if($member_id){
 }
 if(isset($_POST['submit'])){
 	include 'inc/check_register.inc.php';
-	$query="insert into user(Username,Password,email,Register_Time,Data_Of_Birth,User_Agreement,Phone_Number) values('{$_POST['name']}',md5('{$_POST['pw']}'),'{$_POST['email']}',now(),'{$_POST['Date_Of_Birth']}','{$_POST['User_Agreement']}','{$_POST['Phone_number']}')";
+	$query="insert into user(Username,Password,email,Register_Time,Data_Of_Birth,User_Agreement,Phone_Number,last_time) values('{$_POST['name']}',md5('{$_POST['pw']}'),'{$_POST['email']}',now(),'{$_POST['Date_Of_Birth']}','{$_POST['User_Agreement']}','{$_POST['Phone_number']}',now())";
 	execute($link,$query);
 	if(mysqli_affected_rows($link)==1){
 		setcookie('sfk[name]',$_POST['name']);

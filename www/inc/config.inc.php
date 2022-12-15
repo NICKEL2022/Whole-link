@@ -1,5 +1,5 @@
 <?php 
-date_default_timezone_set('Asia/Shanghai');//set time zone
+date_default_timezone_set('Europe/Paris');//set time zone
 session_start();
 header('Content-type:text/html;charset=utf-8');
 if(version_compare(PHP_VERSION,'5.4.0')<0){

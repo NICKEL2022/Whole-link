@@ -19,8 +19,8 @@ exit();
 }
 //Verify that the foreground user is logged in
 function is_login($link){
-	if(isset($_COOKIE['sfk']['name']) && isset($_COOKIE['sfk']['pw'])){
-		$query="select * from user where Username='{$_COOKIE['sfk']['name']}' and sha1(Password)='{$_COOKIE['sfk']['pw']}'";
+	if(isset($_COOKIE['name']) && isset($_COOKIE['pw'])){
+		$query="select * from user where Username='{$_COOKIE['name']}' and sha1(Password)='{$_COOKIE['pw']}'";
 		$result=execute($link,$query);
 		if(mysqli_num_rows($result)==1){
 			$data=mysqli_fetch_assoc($result);

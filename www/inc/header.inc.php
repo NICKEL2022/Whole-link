@@ -31,19 +31,19 @@ foreach ($template['css'] as $val){
 		<div id="header" class="auto">
 			<div class="logo">Wholelink</div>
 			<div class="nav">
-				<a class="hover" href="index.php">index</a>
+				<a class="hover" href="index.php">Dashboard</a>
 			</div>
 			<div class="serarch">
 				<form action="#" method="post">
-					<input name="voice" id="voices">
-					<input class="btn" name="submit" type="submit" value="post" />
-					<span style="text-decoration:underline;cursor:pointer;" onclick="startVoice();$(this).hide();">Click here to start</span>
+					<input name="voice" id="voices" class="voices" />
+					<input class="pbottom" name="submit" type="submit" value="post" />
+					<span class="click" onclick="startVoice();$(this).hide();">Click here to start</span>
 					<div class="login">
 				</form>
 				<?php 
 				if(isset($member_id) && $member_id){
 $str=<<<A
-					<a href="#?id={$member_id}" target="_blank">Hello！{$_COOKIE['sfk']['name']}</a> <span style="color:#fff;">|</span> <a href="logout.php">logout</a>
+					<a href="#?id={$member_id}" target="_blank">Hello！{$_COOKIE['name']}</a> <span style="color:#fff;">|</span> <a href="logout.php">logout</a>
 A;
 					echo $str;		
 				}else{

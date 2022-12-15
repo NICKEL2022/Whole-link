@@ -11,4 +11,6 @@ $template['css']=array('style/public.css','style/index.css');
 ?>
 <?php include 'inc/header.inc.php'?>
 
-<?php include 'dashboard.html'?>
+<?php include 'History Page.html'?>
+
+<?php include 'inc/footer.inc.php'?>
