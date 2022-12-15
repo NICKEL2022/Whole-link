@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Record</title>
+
+    <link rel="stylesheet" href="./style/history.css" />
+    <!-- navigation css-->
+    <link rel="stylesheet" href="./style/core.css" />
+</head>
+
+<body>
+<!-- Layout wrapper -->
+<div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+    <!-- / Navbar -->
+    <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="menu-inner-shadow"></div>
+    
+        <ul class="menu-inner py-1">
+        <!-- Dashboard -->
+        <li class="menu-item">
+            <a href="index.html" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-home-circle"></i>
+            <div data-i18n="Analytics">Dashboard</div>
+            </a>
+        </li>
+
+        <!-- Devices -->
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-layout"></i>
+            <div data-i18n="Devices">Devices</div>
+            </a>
+
+            <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="layouts-without-menu.html" class="menu-link">
+                <div data-i18n="List">List</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="layouts-without-navbar.html" class="menu-link">
+                <div data-i18n="available">available</div>
+                </a>
+            </li>
+            </ul>
+        </li>
+
+        <!-- Stuation = cards -->
+        <li class="menu-item">
+            <a href="cards-basic.html" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-collection"></i>
+            <div data-i18n="Basic">situation</div>
+            </a>
+        </li>
+
+
+        <!-- Shopping mall = cards -->
+        <li class="menu-item">
+            <a href="cards-basic.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Shopping mall</div>
+            </a>
+        </li>
+            <!--Historical Record = cards -->
+            <li class="menu-item active">
+            <a href="cards-basic.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Historical Record</div>
+            </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- / Navbar -->
+
+    
+    <div class="content-wrapper">
+        <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row">
+
+                <!-- / User-->
+                <div class="col-lg-8 mb-4 order-0">
+                    <div class="card">
+                        <div class="d-flex align-items-end row">
+                            <div class="col-sm-7">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary"> John! </h5>
+                                    <p class="mb-4">
+                                    Wednesday, March 16, 2022  |  5.10 AM  
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / User-->
+
+                <!-- / put everything in here-->
+                <div>
+                    <p>Logs</p>
+                    <form method="post">
+                        Times:&emsp;From <input type="datetime-local" name="fromTime" placeholder="Last Name" class="time" /> &emsp;
+                        To <input type="datetime-local" name="toTime" placeholder="Last Name" class="time" /> &emsp;
+                        <input type="submit" value="Search" class="submit" />
+                    </form>
+                    <br/>
+                    <table class="log">
+                        <tr class="log_line">
+                            <th class="log_line">
+                                No.
+                            </th>
+                            <th class="log_line">
+                                Times
+                            </th>
+                            <th class="log_line">
+                                User
+                            </th>
+                            <th class="log_line">
+                                Log Details
+                            </th>
+                            <th class="log_line">
+                                Successful
+                            </th>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                1
+                            </td>
+                            <td class="log_line">
+                                15-12-2022 00:38:25
+                            </td>
+                            <td class="log_line">
+                                123
+                            </td>
+                            <td class="log_line">
+                                Air Conditioner On
+                            </td>
+                            <td class="log_line">
+                                True
+                            </td>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                2
+                            </td>
+                            <td class="log_line">
+                                15-12-2022 00:35:23
+                            </td>
+                            <td class="log_line">
+                                123
+                            </td>
+                            <td class="log_line">
+                                Android TV On
+                            </td>
+                            <td class="log_line">
+                                True
+                            </td>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                3
+                            </td>
+                            <td class="log_line">
+                                15-12-2022 00:33:54
+                            </td>
+                            <td class="log_line">
+                                123
+                            </td>
+                            <td class="log_line">
+                                Light On
+                            </td>
+                            <td class="log_line">
+                                True
+                            </td>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                4
+                            </td>
+                            <td class="log_line">
+                                15-12-2022 00:33:11
+                            </td>
+                            <td class="log_line">
+                                123
+                            </td>
+                            <td class="log_line">
+                                Curtain OFF
+                            </td>
+                            <td class="log_line">
+                                True
+                            </td>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                5
+                            </td>
+                            <td class="log_line">
+                                14-12-2022 23:22:32
+                            </td>
+                            <td class="log_line">
+                                123
+                            </td>
+                            <td class="log_line">
+                                Smart Clearner OFF
+                            </td>
+                            <td class="log_line">
+                                True
+                            </td>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                6
+                            </td>
+                            <td class="log_line">
+                                14-12-2022 23:21:28
+                            </td>
+                            <td class="log_line">
+                                test123
+                            </td>
+                            <td class="log_line">
+                                Light OFF
+                            </td>
+                            <td class="log_line">
+                                False
+                            </td>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                7
+                            </td>
+                            <td class="log_line">
+                                14-12-2022 23:20:51
+                            </td>
+                            <td class="log_line">
+                                test123
+                            </td>
+                            <td class="log_line">
+                                Air Conditioner OFF
+                            </td>
+                            <td class="log_line">
+                                True
+                            </td>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                8
+                            </td>
+                            <td class="log_line">
+                                14-12-2022 23:20:13
+                            </td>
+                            <td class="log_line">
+                                test123
+                            </td>
+                            <td class="log_line">
+                                Change air conditioner temperature
+                            </td>
+                            <td class="log_line">
+                                True
+                            </td>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                9
+                            </td>
+                            <td class="log_line">
+                                14-12-2022 23:19:21
+                            </td>
+                            <td class="log_line">
+                                123
+                            </td>
+                            <td class="log_line">
+                                Air Conditioner On
+                            </td>
+                            <td class="log_line">
+                                True
+                            </td>
+                        </tr>
+                        <tr class="log_line">
+                            <td class="log_line">
+                                10
+                            </td>
+                            <td class="log_line">
+                                14-12-2022 23:17:42
+                            </td>
+                            <td class="log_line">
+                                123
+                            </td>
+                            <td class="log_line">
+                                Change air conditioner temperature
+                            </td>
+                            <td class="log_line">
+                                False
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- / put everything in here-->
+            </div>
+        </div>
+    </div><br/>
+
+    
+
+    
+
+</div>
+    
+    
+</body>

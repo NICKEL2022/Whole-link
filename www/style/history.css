@@ -1,0 +1,24 @@
+.time{
+  color: rgb(168, 168, 179);
+  width: 150px;
+  height: 25px;
+  border: 1px solid rgb(168, 168, 179);
+  border-radius: 5px;
+}
+
+.submit{
+  color: white;
+  background-color: #696cff;
+  border: 1px solid #696cff;
+  border-radius: 5px;
+}
+
+.log{
+  width: 90%;
+}
+
+.log_line{
+  border: 1px solid rgb(218, 218, 218);
+  color: #696cff;
+  text-align: center;
+}
