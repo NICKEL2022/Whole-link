@@ -8,7 +8,7 @@ if(basename($_SERVER['SCRIPT_NAME'])=='manage_delete.php' || basename($_SERVER['
 		if(!isset($_SERVER['HTTP_REFERER'])){
 			$_SERVER['HTTP_REFERER']='index.php';
 		}
-		skip($_SERVER['HTTP_REFERER'],'error','对不起您权限不足！');
+		skip($_SERVER['HTTP_REFERER'],'error','Sorry for your lack of authority!');
 	}
 }
 ?>
