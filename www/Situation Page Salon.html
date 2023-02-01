@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+<!-- MATERIAL CDN -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="./style/situation.css" class="template-customizer-core-css" />
+    <script src="dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    
+  
+
+</head>
+
+<body>
+ 
+  <div class="container">
+    <aside>
+      <div class="top">
+        <h2>Whole-Link</h2>
+      </div>
+      <div class="close" id="close-btn">
+        <span class="material-symbols-sharp">close</span>
+      </div>
+
+      <div class="sidebar">
+        <a href="Dashboard page.html">
+          <span class="material-symbols-sharp">home</span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="Devices Page.html">
+          <span class="material-symbols-sharp">nest_wifi_mistral</span>
+          <h3>Devices</h3>
+        </a>
+        <a href="Situation Page.html">
+          <span class="material-symbols-sharp">grid_view</span>
+          <h3>situation</h3>
+        </a>
+        <a href="History Page.html">
+          <span class="material-symbols-sharp">summarize</span>
+          <h3>Historical Record</h3>
+        </a>
+        <a href="Support Page.html">
+          <span class="material-symbols-sharp">Settings</span>          
+          <h3>Support</h3>
+        </a>
+      
+      </div>
+    </aside>
+  
+  
+      <main>
+        <h1>Salon</h1>
+        <!-- 用户名 -->
+       
+        <nav id="primary_nav_wrap" >
+          <ul>
+            <li class="current-menu-item"><a href="dashboard page.html">Home</a></li>
+            
+           
+            </li>
+            <li><a href="Situation Page Salon.html">Salon</a>
+              
+            </li>
+            <li><a href="Situation Page Bedroom.html">Bedroom</a>
+  
+            </li>
+            <li><a href="Situation Page Library.html">Library</a></li>
+            <li><a href="Situation Page Gameroom.html">Gameroom</a></li>
+          </ul>
+          </nav>
+      </br>
+        
+        <div class="devices">
+          <!-- sound -->
+          <div class="Sound">
+            <!-- 弹窗按钮 -->
+            <div class="middle">
+              <div class="left">
+                <h3>Speaker</h3>
+              </div>
+            </div>
+              <button class="btn-alert1">
+                <span class="material-symbols-sharp">speaker</span>
+              </button>
+              <br><br>
+            <!-- 弹窗内容 -->
+            <div class="alert1">
+              <div class="alert1-body">
+              
+                  <div class="alert1-content">
+                    <form id="Speakers" method="post">
+                      
+                        <lable >Switch</lable>
+                        <select name="Device_Status" style="color:#007bff">
+                          
+                          <option  value="0">off</option>
+                          <option  value="1">on</option>
+                        </select>                     
+                        <br>
+                      <lable>Volume</lable>
+                          
+                          <select name="Volume"style="color:#007bff" >
+                            <option value="10">10</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                            <option value="70">70</option>
+                            <option value="90">90</option>
+                            <option value="100">100</option>
+                          </select>
+                     
+                      <br><br><br>
+                      <input type="submit" value="OK">
+                      
+                    </form>
+                      
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+  
+  
+          <!-- TV -->
+          <div class="Tv">
+           
+            <div class="middle">
+              <div class="left">
+                <h3>Android TV</h3>
+              </div>         
+            </div>
+            <button class="btn-alert2">
+              <span class="material-symbols-sharp">Tv</span>
+            </button>
+            <br><br>
+          <!-- 弹窗内容 -->
+          <div class="alert2">
+            <div class="alert2-body">
+                <div class="alert2-content">
+                 
+                  <form id="TV" methond="post">
+                    
+                      <lable>Switch</lable>
+                      <select name="Device_Status" style="color:#007bff">
+                        <option value="1">on</option>
+                        <option value="0">off</option>
+                      </select>                     
+                      <br>
+                    <lable>Volume</lable>
+                        
+                        <select name="Volume" style="color:#007bff">
+                          <option value="0">0</option>
+                          <option value="10">10</option>
+                          <option value="30">30</option>
+                          <option value="50">50</option>
+                          <option value="70">70</option>
+                          <option value="90">90</option>
+                          <option value="100">100</option>
+                        </select>
+                    <lable>Brightness</lable>
+                        <select name="Brightness" style="color:#007bff"> 
+                          <option value="0">0</option>
+                          <option value="10">10</option>
+                          <option value="30">30</option>
+                          <option value="50">50</option>
+                          <option value="70">70</option>
+                          <option value="90">90</option>
+                          <option value="100">100</option>
+                        </select>
+                   
+                    <br><br>
+                    <input type="submit" value="OK">
+                  </form>
+                </div>
+            </div>
+          </div>
+            
+          </div>
+        
+          <!-- Curtain -->
+          <div class="Curtain">
+            <div class="middle">
+              <div class="left">
+                <h3>Curtain</h3>
+              </div>
+          
+            </div>
+            <button class="btn-alert3">
+              <span class="material-symbols-sharp">Curtains</span>
+            </button>
+           
+            <div class="alert3">
+              <div class="alert3-body">
+                  
+                  <div class="alert3-content">
+                    <br>
+                    <form id="Curtain" methond="post">
+                      
+                        <lable>Switch</lable>
+                        <select name="Status_percentage" style="color:#007bff">
+                          <option value="3">on</option>
+                          <option value="2">Open halfway</option>
+                          <option value="1">Open 1/4</option>
+                          <option value="1">OFF</option>
+                        </select>                     
+                        
+                     
+                      <br><br> <br><br>
+                      <input type="submit" value="OK">
+                    </form>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <!-- coffee machine -->
+
+          <div class="Cleaner">
+            <div class="middle">
+              <div class="left">
+                <h3>Coffee machine</h3>
+              </div>
+            </div>
+  
+            <button class="btn-alert4">
+              <span class="material-symbols-sharp">egg</span>
+            </button>
+            <br><br>
+            <div class="alert4">
+              <div class="alert4-body">
+                  
+                  <div class="alert4-content">
+                    <form id="Coffee Machine" methond="post">
+                        <lable>Switch</lable>
+                        <select name="Device_Status" style="color:#007bff">
+                          <option value="1">on</option>
+                          <option value="0">off</option>
+                        </select>                     
+                        <br><br>
+                     
+                      <br><br><br>
+                      <input type="submit" value="OK">
+                    </form>
+                  </div>
+              </div>
+            </div>
+          
+          </div>
+  
+    <!-- Sockets -->
+    <div class="Cleaner">
+      <div class="middle">
+        <div class="left">
+          <h3>Sockets</h3>
+        </div>
+      </div>
+  
+      <button class="btn-alert41">
+        <span class="material-symbols-sharp">Power</span>
+      </button>
+      <br><br>
+      <div class="alert41">
+        <div class="alert41-body">
+            
+            <div class="alert41-content">
+              <form id="Sockets" methond="post">
+                  <lable>Switch</lable>
+                  <select name="Device_Status" style="color:#007bff">
+                    <option value="1">ON</option>
+                    <option value="0">OFF</option>
+                  </select>                     
+                  <br>
+                  <br><br>
+                <br><br>
+                <input type="submit" value="OK">
+              </form>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+  
+        </div>
+  
+        <!-- control -->
+        <div class="control">
+          <div class="Light">
+            <div class="control-title">
+              <h4>Light control</h4>
+            </div>
+            <span class="material-symbols-sharp">light_mode</span>
+            <div class="alert5">
+              <div class="alert5-body">
+               
+                  <div class="alert-content5">
+                    <form id="Light" methond="post">
+                        <lable>Switch</lable>
+                        <select name="Device_Status">
+                          <option value="1">ON</option>
+                          <option value="0">OFF</option>
+                        </select>                     
+                        <br>
+                        <lable>Brightness</lable>
+                        <select name="Brightness">
+                          <option value="0">0</option>
+                          <option value="10">10</option>
+                          <option value="30">30</option>
+                          <option value="50">50</option>
+                          <option value="70">70</option>
+                          <option value="90">90</option>
+                          <option value="100">100</option>
+                        </select>
+                      <br><br>
+                      <input type="submit" value="OK">
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+     
+  
+          <div class="Air conditioner">
+            <div class="control-title">
+              <h4>Air conditioner</h4>
+            </div>
+            <span class="material-symbols-sharp">mode_fan</span>
+            <div class="alert6">
+              <div class="alert6-body">
+               
+                  <div class="alert-content6">
+                    <form id="Air conditioner" methond="post">
+                        <lable>Switch</lable>
+                        <select name="Device_Status">
+                          <option value="1">ON</option>
+                          <option value="0">OFF</option>
+                        </select>                     
+                        <br>
+                        <lable>Modes</lable>
+                        <select name="Modes">
+                          <option value="1">Cool</option>
+                          <option value="2">Warm</option>
+                          <option value="3">Dehumidification</option>
+                          
+                        </select>
+                        <br>
+                        <lable>Temperature</lable>
+                        <select name="Temperature">
+                          <option value="10">10</option>
+                          <option value="15">15</option>
+                          <option value="20">20</option>
+                          <option value="25">25</option>
+                          <option value="30">30</option>
+                          <option value="35">35</option>
+                        </select>    
+                      <br><br>
+                      <input type="submit" value="OK">
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+  
+  
+  
+  
+          <div class="Air conditioner">
+            <div class="control-title">
+              <h4>Bathtub</h4>
+            </div>
+            <span class="material-symbols-sharp">Bathtub</span>
+            <div class="alert61">
+              <div class="alert61-body">
+               
+                  <div class="alert-content61">
+                    <form id="Bathtub" methond="post">
+                        <lable>Switch</lable>
+                        <select name="Device_Status">
+                          <option value="1">ON</option>
+                          <option value="0">OFF</option>
+                        </select>                     
+                        <br>
+                        <lable>Temperature</lable>
+                        <select name="Temperature">
+                          <option value="10">10</option>
+                          <option value="15">15</option>
+                          <option value="20">20</option>
+                          <option value="25">25</option>
+                          <option value="30">30</option>
+                          <option value="35">35</option>
+                        </select>    
+                      <br><br>
+                      <input type="submit" value="OK">
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+    
+    <div class="shopping-cartf">
+      <!-- Title -->
+      <div class="titlef">
+        <h3>Availabe Devices</h3>
+      </div>
+     
+      <!-- Product #1 -->
+      <div class="itemf">
+        
+     
+        <div class="imagef">
+          <span class="material-symbols-sharp">Power</span>
+        </div>
+     
+        <div class="descriptionf">
+          
+          <h3>Vaccum Cleaner</h3>
+        </div>
+   
+        <div class="total-pricef">
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+     
+      <!-- Product #2 -->
+      <div class="itemf">
+        
+     
+        <div class="imagef">
+          <span class="material-symbols-sharp">toys_fan</span>
+        </div>
+     
+        <div class="descriptionf">
+          
+          <h3>fan &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </h3>
+        
+        </div>
+   
+        <div class="total-pricef">
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+  
+   <!-- Product #3 -->
+   <div class="itemf">
+        
+     
+    <div class="imagef">
+      <span class="material-symbols-sharp">videocam</span>
+    </div>
+  
+    <div class="descriptionf">
+      
+      <h3>CCTV Camera  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h3>
+    </div>
+  
+    <div class="total-pricef">
+      <button class="connect">Connect</button>
+    </div>
+  </div>
+     
+    </div>
+          
+      </main>
+  
+      
+  
+    </div>
+  
+    
+    
+   <script>
+    //Sound
+      
+  
+          var dt = new Date();
+  document.getElementById("datetime").innerHTML = dt.toLocaleString();
+ 
+ 
+        </script>
+  </body>
+   
+    
+  </body>
+  </html>
+  
+  
+  
+  
+  
+  
