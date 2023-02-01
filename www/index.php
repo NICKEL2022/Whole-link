@@ -9,6 +9,4 @@ $member_id=is_login($link);
 $template['title']='Dashboard';
 $template['css']=array('style/public.css','style/index.css');
 ?>
-<?php include 'inc/header.inc.php'?>
-
-<?php include 'dashboard.html'?>
+<?php include 'login.php'?>

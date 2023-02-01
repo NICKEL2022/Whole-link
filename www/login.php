@@ -5,7 +5,7 @@ include_once 'inc/tool.inc.php';
 $link=connect();
 $member_id=is_login($link);
 if($member_id){
-	skip('index.php','error','You are already logged in, please do not log in again!');
+	skip('dashboard.php','error','You are already logged in, please do not log in again!');
 }
 if(isset($_POST['submit'])){
 	include 'inc/check_login.inc.php';
@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
 		setcookie('pw',sha1(md5($_POST['pw'])),time()+$_POST['times']);
 		/*Set the last_time field of this logged-in member to now()+posted time*/
 		execute($link,$query1);
-		skip('index.php','ok','login secess！');
+		skip('dashboard.php','ok','login secess！');
 	}else{
 		skip('login.php', 'error', 'Username or password is wrong!');
 	}

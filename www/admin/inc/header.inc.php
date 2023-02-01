@@ -36,23 +36,11 @@ foreach ($template['css'] as $val){
 			</ul>
 		</li>
 		<li><!--  class="current" -->
-			<div class="small_title">内容管理</div>
+			<div class="small_title">content management</div>
 			<ul class="child">
-				<li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='father_module.php'){echo 'class="current"';}?> href="father_module.php">父板块列表</a></li>
-				<li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='father_module_add.php'){echo 'class="current"';}?> href="father_module_add.php">添加父板块</a></li>
-				<?php 
-				if(basename($_SERVER['SCRIPT_NAME'])=='father_module_update.php'){
-					echo '<li><a class="current">编辑父版块</a></li>';
-				}
-				?>
-				<li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='son_module.php'){echo 'class="current"';}?> href="son_module.php">子板块列表</a></li>
-				<li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='son_module_add.php'){echo 'class="current"';}?> href="son_module_add.php">添加子板块</a></li>
-				<?php 
-				if(basename($_SERVER['SCRIPT_NAME'])=='son_module_update.php'){
-					echo '<li><a class="current">编辑子版块</a></li>';
-				}
-				?>
-				<li><a target="_blank" href="../index.php">帖子管理</a></li>
+				<li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='message_list.php'){echo 'class="current"';}?> href="message_list.php">message list</a></li>
+				<li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='Devices.php'){echo 'class="current"';}?> href="Devices.php">Devices</a></li>
+				<li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='Devices_manage.php'){echo 'class="current"';}?> href="Devices_manage.php">Devices manage</a></li>
 			</ul>
 		</li>
 	</ul>

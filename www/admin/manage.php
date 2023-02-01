@@ -29,7 +29,7 @@ $template['css']=array('style/public.css');
 			
 			$url=urlencode("manage_delete.php?id={$data['id']}");
 			$return_url=urlencode($_SERVER['REQUEST_URI']);
-			$message="Do you really want to remove the admin： {$data['name']} 吗？";
+			$message="Do you really want to remove the admin： {$data['name']} ？";
 			$delete_url="confirm.php?url={$url}&return_url={$return_url}&message={$message}";
 			
 $html=<<<A

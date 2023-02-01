@@ -42,7 +42,7 @@ function check_user($member_id,$content_member_id,$is_manage_login){
 //Verify that the background administrator is logged in
 function is_manage_login($link){
 	if(isset($_SESSION['manage']['name']) && isset($_SESSION['manage']['pw'])){
-		$query="select * from sfk_manage where name='{$_SESSION['manage']['name']}' and sha1(pw)='{$_SESSION['manage']['pw']}'";
+		$query="select * from admin where name='{$_SESSION['manage']['name']}' and sha1(pw)='{$_SESSION['manage']['pw']}'";
 		$result=execute($link,$query);
 		if(mysqli_num_rows($result)==1){
 			return true;

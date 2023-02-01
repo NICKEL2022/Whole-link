@@ -9,19 +9,6 @@ include_once 'inc/is_manage_login.inc.php';//验证管理员是否登录
 $query="select * from admin where id={$_SESSION['manage']['id']}";
 $result_manage=execute($link, $query);
 $data_manage=mysqli_fetch_assoc($result_manage);
-
-//$query="select count(*) from sfk_father_module";
-//$count_father_module=num($link,$query);
-
-//$query="select count(*) from sfk_son_module";
-//$count_son_module=num($link,$query);
-
-//$query="select count(*) from sfk_content";
-//$count_content=num($link,$query);
-
-//$query="select count(*) from sfk_reply";
-//$count_reply=num($link,$query);
-
 $query="select count(*) from user";
 $count_member=num($link,$query);
 
@@ -48,10 +35,7 @@ $template['css']=array('style/public.css');
 	</div>
 	<div class="explain">
 		<ul>
-			<li>|- 父版块(<?php echo $count_father_module?>)
-			                 子版块(<?php echo $count_son_module?>)
-			                 帖子(<?php echo $count_content?>)
-			                 回复(<?php echo $count_reply?>)
+			<li>
 			                 User(<?php echo $count_member?>)
 			                 Admin(<?php echo $count_manage?>)
 			</li>
